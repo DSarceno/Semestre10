@@ -1,0 +1,186 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7626,        178]
+NotebookOptionsPosition[      7114,        160]
+NotebookOutlinePosition[      7544,        177]
+CellTagsIndexPosition[      7501,        174]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ListLinePlot", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"1", "-", 
+          FractionBox["1", "\[Lambda]"]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "0", ",", "100"}], "}"}]}], "]"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", 
+       RowBox[{"AspectRatio", "\[Rule]", " ", "0.25"}], ",", 
+       RowBox[{
+       "PlotLabel", "\[Rule]", " ", "\"\<Mapa Log\[IAcute]stico\>\""}]}], 
+      "]"}], ",", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"RecurrenceTable", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"n", "+", "1"}], "]"}], "\[Equal]", 
+            RowBox[{"\[Lambda]", " ", 
+             RowBox[{"(", 
+              RowBox[{"a", "[", "n", "]"}], ")"}], 
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"a", "[", "n", "]"}]}], ")"}]}]}], ",", 
+           RowBox[{
+            RowBox[{"a", "[", "0", "]"}], "\[Equal]", "x"}]}], "}"}], ",", 
+         "a", ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "0", ",", "100"}], "}"}]}], "]"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", " ", 
+        RowBox[{"{", 
+         RowBox[{"Red", ",", 
+          RowBox[{"PointSize", "[", "Medium", "]"}]}], "}"}]}], ",", 
+       RowBox[{"AspectRatio", "\[Rule]", " ", "0.25"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0.25", ",", "\"\<Valor inicial\>\""}], "}"}], ",", 
+     "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Lambda]", ",", "2", ",", "\"\<Par\[AAcute]metro\>\""}], 
+      "}"}], ",", "0.0001", ",", "4", ",", "0.0001"}], "}"}], ",", 
+   RowBox[{"ControlPlacement", "\[Rule]", " ", "Bottom"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.887228858196085*^9, 3.887228866764268*^9}, {
+   3.8872289130281444`*^9, 3.8872289187228613`*^9}, 3.887229095752438*^9, {
+   3.8872292578244247`*^9, 3.887229279106118*^9}, {3.8872293910588512`*^9, 
+   3.8872293917191963`*^9}, {3.8872294220658607`*^9, 3.887229511360255*^9}, {
+   3.887229571476492*^9, 3.8872295957680006`*^9}, {3.887229637017536*^9, 
+   3.8872297459658117`*^9}, {3.887229792230356*^9, 3.8872299141384425`*^9}, {
+   3.887230057773154*^9, 3.8872300610806417`*^9}, {3.8872300978411703`*^9, 
+   3.887230175501957*^9}, 3.887230221891589*^9, {3.887230736430811*^9, 
+   3.887230737761491*^9}, {3.887231229567725*^9, 3.8872312404975567`*^9}, {
+   3.8872314523573627`*^9, 3.887231561785008*^9}, {3.887231617720394*^9, 
+   3.8872316230939937`*^9}, {3.8872316963642344`*^9, 
+   3.8872317061372814`*^9}, {3.8872317650984335`*^9, 
+   3.8872317875037117`*^9}, {3.8872320086334677`*^9, 
+   3.8872320095637894`*^9}, {3.887399112311837*^9, 3.8873991204024663`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"b58158de-6b15-40cb-9601-aadeda1c335b"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 0.007, $CellContext`\[Lambda]$$ = 
+    1.6247, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`x$$], 0.25, "Valor inicial"}, 0, 1}, {{
+       Hold[$CellContext`\[Lambda]$$], 2, "Par\[AAcute]metro"}, 0.0001, 4, 
+      0.0001}}, Typeset`size$$ = {
+    922.799999999988, {137., 146.36326530611944`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`x$$ = 0.25, $CellContext`\[Lambda]$$ = 2}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        ListLinePlot[
+         Table[1 - 1/$CellContext`\[Lambda]$$, {$CellContext`n, 0, 100}], 
+         PlotRange -> {0, 1}, PlotStyle -> Blue, AspectRatio -> 0.25, 
+         PlotLabel -> "Mapa Log\[IAcute]stico"], 
+        ListPlot[
+         RecurrenceTable[{$CellContext`a[$CellContext`n + 
+             1] == $CellContext`\[Lambda]$$ $CellContext`a[$CellContext`n] (
+             1 - $CellContext`a[$CellContext`n]), $CellContext`a[
+            0] == $CellContext`x$$}, $CellContext`a, {$CellContext`n, 0, 
+           100}], PlotRange -> {0, 1}, PlotStyle -> {Red, 
+           PointSize[Medium]}, AspectRatio -> 0.25]], 
+      "Specifications" :> {{{$CellContext`x$$, 0.25, "Valor inicial"}, 0, 
+         1}, {{$CellContext`\[Lambda]$$, 2, "Par\[AAcute]metro"}, 0.0001, 4, 
+         0.0001}}, "Options" :> {ControlPlacement -> Bottom}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{995., {228.7, 238.3}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8872296885220575`*^9, {3.8872297331127844`*^9, 3.887229747197692*^9}, {
+   3.887229794862026*^9, 3.887229838591132*^9}, {3.8872298697423353`*^9, 
+   3.887229883453596*^9}, 3.887229914644414*^9, {3.8872300134789433`*^9, 
+   3.88723001657953*^9}, 3.88723006171762*^9, {3.8872300996325617`*^9, 
+   3.8872301787233486`*^9}, {3.8872302227958574`*^9, 
+   3.8872302253219404`*^9}, {3.887230738471345*^9, 3.8872307545961924`*^9}, 
+   3.8872312411089563`*^9, 3.8872312910051107`*^9, 3.8872315628137436`*^9, 
+   3.8872316258727975`*^9, 3.8872317904198823`*^9, 3.8872320102154837`*^9, 
+   3.887232068399167*^9, {3.887399113716803*^9, 3.8873991211647444`*^9}, 
+   3.9009526307859497`*^9, 3.900952725793866*^9, 3.901717295727401*^9, 
+   3.901717456698857*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"2a25fec1-543b-4660-abe1-e11375afb15a"]
+}, Open  ]]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.6 Inherited,
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9be05d5c-ea4f-490d-9233-1bfa6d3afca0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3266, 74, 315, "Input",ExpressionUUID->"b58158de-6b15-40cb-9601-aadeda1c335b"],
+Cell[3849, 98, 3249, 59, 512, "Output",ExpressionUUID->"2a25fec1-543b-4660-abe1-e11375afb15a"]
+}, Open  ]]
+}
+]
+*)
+
