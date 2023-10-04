@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  1 OCT 2023 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  1 OCT 2023 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**listadoClases.tex
-(./listadoClases.tex
+**propuestap1.tex
+(./propuestap1.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/home/diego/Documents/Licenciatura/LatexBasic/Preamble_general.tex
@@ -1386,28 +1386,28 @@ Package: fourier-orns 2020/01/14 2.1 fourier-ornaments package
 LaTeX Warning: Unused global option(s):
     [letterpage].
 
-(./listadoClases.aux
+(./propuestap1.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
-\openout1 = `listadoClases.aux'.
+\openout1 = `propuestap1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1447,8 +1447,8 @@ Package geometry Warning: The marginal notes overrun the paper.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count395
@@ -1474,7 +1474,7 @@ e
 \AtBeginShipoutBox=\box133
 
 ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring ON on input line 30.
+Package hyperref Info: Link coloring ON on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1487,20 +1487,20 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count401
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 
-(./listadoClases.out) (./listadoClases.out)
+(./propuestap1.out) (./propuestap1.out)
 \@outlinefile=\write6
-\openout6 = `listadoClases.out'.
+\openout6 = `propuestap1.out'.
 
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 30.
+ on input line 31.
 
 \c@lstlisting=\count402
 (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
@@ -1522,111 +1522,33 @@ Dictionary: translator-basic-dictionary, Language: Spanish
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 30
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 31
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 30
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(./Header_original.tex
-</home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf, id=7, 521.16649pt x 52
-1.22568pt>
-File: /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf Graphic file (type
- pdf)
-<use /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf>
-Package pdftex.def Info: /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf
-  used on input line 23.
-(pdftex.def)             Requested size: 67.75401pt x 67.7617pt.
+(./Header_original.tex) (./content.tex) [1
 
-Overfull \hbox (2.31259pt too wide) in paragraph at lines 23--23
-[]|[]|  
- []
-
-
-Overfull \vbox (17.44177pt too high) detected at line 23
- []
-
-</home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf, id=8, 813.77554pt x 81
-4.34445pt>
-File: /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf Graphic file (type
- pdf)
-<use /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf>
-Package pdftex.def Info: /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf
-  used on input line 23.
-(pdftex.def)             Requested size: 66.73003pt x 66.77667pt.
-
-Overfull \vbox (16.45674pt too high) detected at line 23
- []
-
-File: /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf Graphic file (type
- pdf)
-<use /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf>
-Package pdftex.def Info: /home/diego/Documents/Licenciatura/LatexBasic/ECFM.pdf
-  used on input line 23.
-(pdftex.def)             Requested size: 67.75401pt x 67.7617pt.
-
-Overfull \hbox (2.31259pt too wide) in paragraph at lines 23--23
-[]|[]|  
- []
-
-
-Overfull \vbox (17.44177pt too high) detected at line 23
- []
-
-File: /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf Graphic file (type
- pdf)
-<use /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf>
-Package pdftex.def Info: /home/diego/Documents/Licenciatura/LatexBasic/USAC.pdf
-  used on input line 23.
-(pdftex.def)             Requested size: 66.73003pt x 66.77667pt.
-
-Overfull \vbox (16.45674pt too high) detected at line 23
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--24
-
- []
-
-) (./content.tex [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/diego/Documents/Lice
-nciatura/LatexBasic/ECFM.pdf> </home/diego/Documents/Licenciatura/LatexBasic/US
-AC.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file /home/diego/Documents/Licenciatura/Late
-xBasic/USAC.pdf): PDF inclusion: multiple pdfs with page group included in a si
-ngle page
->])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
-Make it at least 13.59999pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-LaTeX Font Info:    Trying to load font information for U+futs on input line 52
-.
-(/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
-File: ufuts.fd 2004/03/02 Fontinst v1.926 font definitions for U/futs.
-) [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1634,34 +1556,34 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 0.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
-(./listadoClases.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+(./propuestap1.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
-Package rerunfilecheck Info: File `listadoClases.out' has not changed.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package rerunfilecheck Info: File `propuestap1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 50298 strings out of 481239
- 1223583 string characters out of 5920378
- 1858023 words of memory out of 5000000
- 64735 multiletter control sequences out of 15000+600000
- 540439 words of font info for 60 fonts, out of 8000000 for 9000
+ 50239 strings out of 481239
+ 1222367 string characters out of 5920378
+ 1843021 words of memory out of 5000000
+ 64683 multiletter control sequences out of 15000+600000
+ 540812 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,15n,100p,917b,897s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on listadoClases.pdf (2 pages, 129892 bytes).
+ 76i,6n,100p,915b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on propuestap1.pdf (1 page, 48726 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
