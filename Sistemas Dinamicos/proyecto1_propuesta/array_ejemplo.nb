@@ -1,0 +1,146 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4665,        136]
+NotebookOptionsPosition[      3963,        115]
+NotebookOutlinePosition[      4365,        131]
+CellTagsIndexPosition[      4322,        128]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matA", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0.5", ",", "0.4", ",", "0.8", ",", "0.4"}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.5", ",", "0.8", ",", "0.4", ",", "0.6", ",", "0", ",", "0"}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0"}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0.5", ",", "0.9", ",", "0.1", ",", "0", ",", "0.4"}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0.4", ",", "0.8", ",", "0.5", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0.4", ",", "0.9", ",", "0.4", ",", "0.6", ",", "0"}],
+       "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.905461770389985*^9, 3.905461899833126*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"c8af0038-3bb8-4ea9-825f-f4c38e534490"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0.5`", "0.4`", "0.8`", "0.4`"},
+     {"0.5`", "0.8`", "0.4`", "0.6`", "0", "0"},
+     {"0", "0", "0", "1", "0", "0"},
+     {"0", "0.5`", "0.9`", "0.1`", "0", "0.4`"},
+     {"0", "0.4`", "0.8`", "0.5`", "0", "0"},
+     {"0", "0.4`", "0.9`", "0.4`", "0.6`", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.9054619016358957`*^9},
+ CellLabel->
+  "Out[3]//MatrixForm=",ExpressionUUID->"b5863412-2a60-49e6-8c4e-\
+00aa7d154c88"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"matA", ",", 
+   RowBox[{"ColorRules", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "->", "Green"}], ",", 
+      RowBox[{"0", "->", "Black"}], ",", 
+      RowBox[{"_", "->", "Gray"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9054619051337557`*^9, 3.905461908271172*^9}, {
+  3.90546219074579*^9, 3.905462193944504*^9}, {3.90546224147068*^9, 
+  3.905462271444684*^9}, {3.905462320812263*^9, 3.9054623231433783`*^9}, {
+  3.905462440602316*^9, 3.905462487581732*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"c96f6e9e-c6f1-4787-90d6-d584b8c01617"],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGBgg2IQGz94YE9bmlQwUPYOlHto7X4Y+EChuYMtnZAKaOd+
+APzfQtI=
+   "], {{0, 0}, {6, 6}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic}]], "Output",
+ CellChangeTimes->{{3.9054624458046207`*^9, 3.905462488256991*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"30047960-f801-46fb-84aa-3c8805bf6370"]
+}, Open  ]]
+},
+WindowSize->{606., 659.25},
+WindowMargins->{{Automatic, -809.25}, {45, Automatic}},
+FrontEndVersion->"13.0 for Linux x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f519ed73-83f6-42a3-8ba3-0bce13a94178"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 959, 24, 92, "Input",ExpressionUUID->"c8af0038-3bb8-4ea9-825f-f4c38e534490"],
+Cell[1542, 48, 866, 23, 131, "Output",ExpressionUUID->"b5863412-2a60-49e6-8c4e-00aa7d154c88"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2445, 76, 622, 13, 29, "Input",ExpressionUUID->"c96f6e9e-c6f1-4787-90d6-d584b8c01617"],
+Cell[3070, 91, 877, 21, 376, "Output",ExpressionUUID->"30047960-f801-46fb-84aa-3c8805bf6370"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**propuestap1.tex
-(./propuestap1.tex
+**propuestap2.tex
+(./propuestap2.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/home/diego/Documents/Licenciatura/LatexBasic/Preamble_general.tex
@@ -1386,11 +1386,11 @@ Package: fourier-orns 2020/01/14 2.1 fourier-ornaments package
 LaTeX Warning: Unused global option(s):
     [letterpage].
 
-(./propuestap1.aux
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+(./propuestap2.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
 )
-\openout1 = `propuestap1.aux'.
+\openout1 = `propuestap2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
@@ -1491,9 +1491,9 @@ LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
 
-(./propuestap1.out) (./propuestap1.out)
+(./propuestap2.out) (./propuestap2.out)
 \@outlinefile=\write6
-\openout6 = `propuestap1.out'.
+\openout6 = `propuestap2.out'.
 
 
 
@@ -1547,18 +1547,54 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 (./Header_original.tex) (./content.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+<./img/coso.png, id=11, 562.1pt x 881.2925pt>
+File: ./img/coso.png Graphic file (type png)
+<use ./img/coso.png>
+Package pdftex.def Info: ./img/coso.png  used on input line 28.
+(pdftex.def)             Requested size: 112.418pt x 176.25537pt.
 
+Underfull \hbox (badness 6396) in paragraph at lines 34--35
+[]\OT1/cmr/m/n/10.95 Con \OT1/cmr/m/it/10.95 Mat-he-ma-ti-ca \OT1/cmr/m/n/10.95
+ se pue-de ge-ne-rar el
  []
 
-<./img/array.pdf, id=9, 361.35pt x 361.35pt>
-File: ./img/array.pdf Graphic file (type pdf)
-<use ./img/array.pdf>
-Package pdftex.def Info: ./img/array.pdf  used on input line 38.
-(pdftex.def)             Requested size: 180.67456pt x 180.67456pt.
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+Underfull \hbox (badness 6032) in paragraph at lines 34--35
+\OT1/cmr/m/n/10.95 con-torno de un pa^^S^^Ps con la si-guien-te fun-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/cmr/m/n/10.95 ci^^Son \OT1/cmtt/m/n/10.95 GeoGraphics[GeoStyling["OutlineM
+ap"],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/cmtt/m/n/10.95 Polygon[Entity["Country", "Germany"]],
+ []
+
+<./img/germany.pdf, id=13, 311.1625pt x 421.575pt>
+File: ./img/germany.pdf Graphic file (type pdf)
+<use ./img/germany.pdf>
+Package pdftex.def Info: ./img/germany.pdf  used on input line 40.
+(pdftex.def)             Requested size: 77.79044pt x 105.39348pt.
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): desti
+nation with the same identifier (name{figure.1}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.48 \end{thebibliography}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.48 \end{thebibliography}
+                           <./img/coso.png> <./img/germany.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -1569,13 +1605,7 @@ LaTeX Font Info:    Trying to load font information for U+futs on input line 53
 .
 (/usr/share/texlive/texmf-dist/tex/latex/fourier/ufuts.fd
 File: ufuts.fd 2004/03/02 Fontinst v1.926 font definitions for U/futs.
-) [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.53 \end{titlepage}
-                     <./img/array.pdf>]
+) [2]
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1585,40 +1615,35 @@ FiXme Summary: Number of notes: 0,
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
-(./propuestap1.aux
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+(./propuestap2.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
-Package rerunfilecheck Info: File `propuestap1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `propuestap2.out' has not changed.
+(rerunfilecheck)             Checksum: 79A6D1F18D5D72AAE423CC38236F0DEA;51.
  ) 
 Here is how much of TeX's memory you used:
- 50322 strings out of 481239
- 1223411 string characters out of 5920378
- 1850018 words of memory out of 5000000
- 64741 multiletter control sequences out of 15000+600000
- 544816 words of font info for 79 fonts, out of 8000000 for 9000
+ 50310 strings out of 481239
+ 1223317 string characters out of 5920378
+ 1849018 words of memory out of 5000000
+ 64735 multiletter control sequences out of 15000+600000
+ 541443 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,12n,100p,915b,926s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on propuestap1.pdf (2 pages, 142141 bytes).
+ 76i,12n,100p,915b,1025s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/fourier/fourier-orns.pfb>
+Output written on propuestap2.pdf (2 pages, 487343 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
