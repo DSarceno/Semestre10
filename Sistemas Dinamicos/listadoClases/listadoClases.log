@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  16 OCT 2023 12:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  3 NOV 2023 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1648,7 +1648,7 @@ Package rerunfilecheck Info: File `listadoClases.out' has not changed.
 Here is how much of TeX's memory you used:
  50298 strings out of 481239
  1223583 string characters out of 5920378
- 1858023 words of memory out of 5000000
+ 1861023 words of memory out of 5000000
  64735 multiletter control sequences out of 15000+600000
  540439 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1658,7 +1658,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on listadoClases.pdf (2 pages, 130128 bytes).
+Output written on listadoClases.pdf (2 pages, 131000 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
