@@ -1,0 +1,83 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2284,         73]
+NotebookOptionsPosition[      1490,         51]
+NotebookOutlinePosition[      1891,         67]
+CellTagsIndexPosition[      1848,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Corto 2\t", "Title",
+ CellChangeTimes->{{3.908493273642153*^9, 
+  3.908493276826326*^9}},ExpressionUUID->"c79edc6f-7831-4bf0-8386-\
+f2e590778b92"],
+
+Cell[CellGroupData[{
+
+Cell["Sistemas Din\[AAcute]micos", "Subsubsection",
+ CellChangeTimes->{{3.90849328779305*^9, 
+  3.9084932900371237`*^9}},ExpressionUUID->"8236b0ce-79f0-42c0-8d90-\
+e3e4d0d3533a"],
+
+Cell["Diego Sarce\[NTilde]o - 201900109", "Text",
+ CellChangeTimes->{{3.9084932945060043`*^9, 
+  3.90849332311382*^9}},ExpressionUUID->"260b5f43-e281-4844-ac63-\
+3dee945e7f8d"]
+}, Open  ]],
+
+Cell["Diagrama", "Section",
+ CellChangeTimes->{{3.908493605705847*^9, 
+  3.908493607103862*^9}},ExpressionUUID->"ee77ff46-881e-4dab-af43-\
+96e00d55bac2"],
+
+Cell["Generaci\[OAcute]n de la Animaci\[OAcute]n", "Section",
+ CellChangeTimes->{{3.9084933672490053`*^9, 
+  3.908493371964478*^9}},ExpressionUUID->"d5889cde-f694-4215-9920-\
+07667d449113"]
+}, Open  ]]
+},
+WindowSize->{606., 659.25},
+WindowMargins->{{Automatic, 327}, {Automatic, 54.75}},
+FrontEndVersion->"13.0 for Linux x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"391d3bb0-eebc-41d1-886a-e620da9d3373"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 152, 3, 98, "Title",ExpressionUUID->"c79edc6f-7831-4bf0-8386-f2e590778b92"],
+Cell[CellGroupData[{
+Cell[757, 29, 178, 3, 45, "Subsubsection",ExpressionUUID->"8236b0ce-79f0-42c0-8d90-e3e4d0d3533a"],
+Cell[938, 34, 176, 3, 35, "Text",ExpressionUUID->"260b5f43-e281-4844-ac63-3dee945e7f8d"]
+}, Open  ]],
+Cell[1129, 40, 153, 3, 68, "Section",ExpressionUUID->"ee77ff46-881e-4dab-af43-96e00d55bac2"],
+Cell[1285, 45, 189, 3, 54, "Section",ExpressionUUID->"d5889cde-f694-4215-9920-07667d449113"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
