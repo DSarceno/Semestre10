@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  15 NOV 2023 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.4)  17 NOV 2023 00:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1119,30 +1119,30 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 ) (./informeGenerico.aux
-LaTeX Info: Redefining \. on input line 23.
-LaTeX Info: Redefining \% on input line 23.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
 )
 \openout1 = `informeGenerico.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 -- Lines per column: 56 (exact).
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count341
@@ -1168,7 +1168,7 @@ e
 \AtBeginShipoutBox=\box120
 
 ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring ON on input line 45.
+Package hyperref Info: Link coloring ON on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1181,9 +1181,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count347
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 
 (./informeGenerico.out) (./informeGenerico.out)
 \@outlinefile=\write6
@@ -1193,30 +1193,245 @@ LaTeX Info: Redefining \nameref on input line 45.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 67.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 67
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 68
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 67
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 68
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+<./img/p1-3_a.pdf, id=135, 361.35pt x 150.5625pt>
+File: ./img/p1-3_a.pdf Graphic file (type pdf)
+<use ./img/p1-3_a.pdf>
+Package pdftex.def Info: ./img/p1-3_a.pdf  used on input line 94.
+(pdftex.def)             Requested size: 144.53743pt x 60.22392pt.
+<./img/p1-3_b.pdf, id=136, 361.35pt x 119.44624pt>
+File: ./img/p1-3_b.pdf Graphic file (type pdf)
+<use ./img/p1-3_b.pdf>
+Package pdftex.def Info: ./img/p1-3_b.pdf  used on input line 99.
+(pdftex.def)             Requested size: 144.53743pt x 47.77763pt.
+<./img/p1-3_c.pdf, id=137, 361.35pt x 187.70125pt>
+File: ./img/p1-3_c.pdf Graphic file (type pdf)
+<use ./img/p1-3_c.pdf>
+Package pdftex.def Info: ./img/p1-3_c.pdf  used on input line 104.
+(pdftex.def)             Requested size: 144.53743pt x 75.07916pt.
+<./img/p1-3_d.pdf, id=138, 361.35pt x 70.2625pt>
+File: ./img/p1-3_d.pdf Graphic file (type pdf)
+<use ./img/p1-3_d.pdf>
+Package pdftex.def Info: ./img/p1-3_d.pdf  used on input line 109.
+(pdftex.def)             Requested size: 144.53743pt x 28.10449pt.
+<./img/p2-1.pdf, id=139, 361.35pt x 352.31625pt>
+File: ./img/p2-1.pdf Graphic file (type pdf)
+<use ./img/p2-1.pdf>
+Package pdftex.def Info: ./img/p2-1.pdf  used on input line 123.
+(pdftex.def)             Requested size: 126.4744pt x 123.31253pt.
+
+Underfull \hbox (badness 1389) in paragraph at lines 157--158
+\OT1/ptm/m/n/10 que $\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0$ \OT1/ptm/m/n/10 es
+ la dis-tan-cia de $\OML/cmm/m/it/10 x$ \OT1/ptm/m/n/10 al pun-to fi-nal m[]as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./img/p1-3_a.pdf> <./img/p1-3_b.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p1-3_b.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./img/p1-3_c.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p1-3_c.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./img/p1-3_d.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p1-3_d.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./img/p2-1.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p2-1.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+<./img/p4-3.pdf, id=230, 361.35pt x 221.82875pt>
+File: ./img/p4-3.pdf Graphic file (type pdf)
+<use ./img/p4-3.pdf>
+Package pdftex.def Info: ./img/p4-3.pdf  used on input line 190.
+(pdftex.def)             Requested size: 144.53743pt x 88.72992pt.
+<./img/p4-5.pdf, id=231, 361.35pt x 221.82875pt>
+File: ./img/p4-5.pdf Graphic file (type pdf)
+<use ./img/p4-5.pdf>
+Package pdftex.def Info: ./img/p4-5.pdf  used on input line 209.
+(pdftex.def)             Requested size: 144.53743pt x 88.72992pt.
+<./img/p4-10.pdf, id=233, 361.35pt x 346.29375pt>
+File: ./img/p4-10.pdf Graphic file (type pdf)
+<use ./img/p4-10.pdf>
+Package pdftex.def Info: ./img/p4-10.pdf  used on input line 218.
+(pdftex.def)             Requested size: 144.53743pt x 138.51503pt.
+ [2 <./img/p4-3.pdf> <./img/p4-5.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p4-5.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./img/p4-10.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p4-10.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+13.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<./img/p14-3_a.pdf, id=266, 361.35pt x 346.29375pt>
+File: ./img/p14-3_a.pdf Graphic file (type pdf)
+<use ./img/p14-3_a.pdf>
+Package pdftex.def Info: ./img/p14-3_a.pdf  used on input line 323.
+(pdftex.def)             Requested size: 144.53743pt x 138.51503pt.
+<./img/p14-3_b.pdf, id=267, 361.35pt x 351.3125pt>
+File: ./img/p14-3_b.pdf Graphic file (type pdf)
+<use ./img/p14-3_b.pdf>
+Package pdftex.def Info: ./img/p14-3_b.pdf  used on input line 330.
+(pdftex.def)             Requested size: 144.53743pt x 140.5225pt.
+<./img/p14-4_a.pdf, id=268, 361.35pt x 358.33875pt>
+File: ./img/p14-4_a.pdf Graphic file (type pdf)
+<use ./img/p14-4_a.pdf>
+Package pdftex.def Info: ./img/p14-4_a.pdf  used on input line 338.
+(pdftex.def)             Requested size: 144.53743pt x 143.33296pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.341 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.341 
+       <./img/p14-3_a.pdf> <./img/p14-3_b.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-3_b.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+<./img/p14-4_b.pdf, id=305, 361.35pt x 343.2825pt>
+File: ./img/p14-4_b.pdf Graphic file (type pdf)
+<use ./img/p14-4_b.pdf>
+Package pdftex.def Info: ./img/p14-4_b.pdf  used on input line 345.
+(pdftex.def)             Requested size: 144.53743pt x 137.31056pt.
+<./img/p14-4_c.pdf, id=306, 361.35pt x 356.33125pt>
+File: ./img/p14-4_c.pdf Graphic file (type pdf)
+<use ./img/p14-4_c.pdf>
+Package pdftex.def Info: ./img/p14-4_c.pdf  used on input line 352.
+(pdftex.def)             Requested size: 144.53743pt x 142.52997pt.
+<./img/p14-4_d.pdf, id=307, 361.35pt x 343.2825pt>
+File: ./img/p14-4_d.pdf Graphic file (type pdf)
+<use ./img/p14-4_d.pdf>
+Package pdftex.def Info: ./img/p14-4_d.pdf  used on input line 359.
+(pdftex.def)             Requested size: 144.53743pt x 137.31056pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<./img/p14-4_e.pdf, id=308, 361.35pt x 356.33125pt>
+File: ./img/p14-4_e.pdf Graphic file (type pdf)
+<use ./img/p14-4_e.pdf>
+Package pdftex.def Info: ./img/p14-4_e.pdf  used on input line 366.
+(pdftex.def)             Requested size: 144.53743pt x 142.52997pt.
+<./img/p14-4_f.pdf, id=309, 361.35pt x 343.2825pt>
+File: ./img/p14-4_f.pdf Graphic file (type pdf)
+<use ./img/p14-4_f.pdf>
+Package pdftex.def Info: ./img/p14-4_f.pdf  used on input line 373.
+(pdftex.def)             Requested size: 144.53743pt x 137.31056pt.
+<./img/p14-4_g.pdf, id=310, 361.35pt x 356.33125pt>
+File: ./img/p14-4_g.pdf Graphic file (type pdf)
+<use ./img/p14-4_g.pdf>
+Package pdftex.def Info: ./img/p14-4_g.pdf  used on input line 380.
+(pdftex.def)             Requested size: 144.53743pt x 142.52997pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 
+       <./img/p14-4_a.pdf> <./img/p14-4_b.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-4_b.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./img/p14-4_c.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-4_c.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./img/p14-4_d.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-4_d.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./img/p14-4_e.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-4_e.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./img/p14-4_f.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./img/p14-4_f.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 1412) in paragraph at lines 391--392
+[]\OT1/ptm/b/n/10 Desigualdad Trian-gu-lar: \OT1/ptm/m/n/10 Da-do que $[] \OT1/
+cmr/m/n/10 + [] \OMS/cmsy/m/n/10 ^^U
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1228,37 +1443,66 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) 
+has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.477 \end{document}
+                    
 
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+ <./img/p14-4_g.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 477.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 477.
  (./informeGenerico.aux
-LaTeX Info: Redefining \. on input line 23.
-LaTeX Info: Redefining \% on input line 23.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
-Package rerunfilecheck Info: File `informeGenerico.out' has not changed.
-(rerunfilecheck)             Checksum: 4F05C7A42A67CF40FCCDA768CDEBBFA3;645.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 477.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 477.
+
+
+Package rerunfilecheck Warning: File `informeGenerico.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `informeGenerico.out':
+(rerunfilecheck)             Before: B0639FCDC6D2210D2993F648328D012B;1875
+(rerunfilecheck)             After:  6816EC794D7517FBA9DBA34CD6E666FA;1813.
  ) 
 Here is how much of TeX's memory you used:
- 31871 strings out of 481239
- 735448 string characters out of 5920378
- 1281612 words of memory out of 5000000
- 46512 multiletter control sequences out of 15000+600000
- 568506 words of font info for 96 fonts, out of 8000000 for 9000
+ 32160 strings out of 481239
+ 739813 string characters out of 5920378
+ 1293610 words of memory out of 5000000
+ 46695 multiletter control sequences out of 15000+600000
+ 577491 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,11n,127p,848b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on informeGenerico.pdf (1 page, 30088 bytes).
+pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on informeGenerico.pdf (5 pages, 606297 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 354 words of extra memory for PDF output out of 10000 (max. 10000000)
 
