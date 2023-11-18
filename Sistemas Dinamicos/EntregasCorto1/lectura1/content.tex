@@ -1,0 +1,215 @@
+%\vspace{1cm}
+
+\section*{Aplicación: Existencia y Unicidad de Soluciones de EDO}
+
+Un ejemplo del principio de contracción implica la prueba estándar de la existencia y unicidad de las soluciones al problema de valor inicial de primer orden
+	\begin{equation}
+		\dot{y} = f_{(t,y)}, \qquad y(t_o) = y_o \label{pvi}
+	\end{equation}
+
+
+en una vecidad de $(t_o,y_o)$ en el plano $t,y$. La prueba utiliza una aproximación dinámica, de nuevo con una primera aproximación y luego iteraciones sucesivas utilizando una técnia atribuida a Charles Émile Picard y conocida como iteraciones de Picard.
+
+
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Teorema 2.24: Teorema de Picard-Lindelöf en $\mathbf{\R}$}} \\
+		Suponga que $f_{(t,y)}$ es continua en algún rectángulo
+			$$ R = \{ (t,y) \in \R ^2 | \alpha < t < \beta ,\, \gamma < y < \delta \} , $$
+		que contiene el punto inicial $(t_o ,y_o)$, y $f$ es Lipschitz continua en $y$ sobre $R$. Entonces, en algún intervalo $t_o - \epsilon < t < t_o + \epsilon$ contenido en $\alpha < t < \beta$, existe una solución única $y = \phi (t)$ de la ecuación \eqref{pvi}.
+	\end{tcolorbox}
+\end{mdframed}
+
+Para demostrar este teorema, necesitamos entender un poco acerca de la estructura de los espacios de funciones. Para empezar, recordemos del álgebra lineal que un operador es simplemente una función $f:U\to V$ cuyo dominio y condominio son espacios vectoriales. Un operador se llama lineal si $\forall \, x,y \in U$ y $c_1, c_2 \in \R$, $f$ satisface
+	$$ f(c_1 x + c_2 y) = c_1 f(x) + c_2 f(y). $$
+Los operadores lineales en los que las dimensiones del dominio $dim(U) = n$ y del codominio $dim(V) = m$ son finitas pueden representarse mediante matrices, de modo que para $f(x) = Ax$, $A$ es una matriz $m\times n$. Las funciones continuas de valor real en $\R$ también forman un espacio vectorial; la suma de múltiplos constantes de dos funciones continuas es siempre es siempre una función continua, por ejemplo. Pero aquí los espacios no son finito-dimensionales. Se pueden formar operadores lineales sobre espacios de funciones como este también, pero el operador no es representable por una matriz. \\
+
+
+Un buen ejemplo es el operdor derivativo $\dv{x}$, que actúa sobre el espacio vectorial de todas las $C^\infty$, funciones de valores real de una variable real independiente, y las lleva a otras funciones $C^\infty$. Piense en 
+	$$ \dv{x} [x^2 + \sin{x}] = 2x+\cos{x}. $$
+	
+Este operador es lineal debido a las reglas de la suma y de la constante múltiple para la diferenciación. Existen numerosas dificultades técnicas	para discutir operadores lineales en general, pero, por ahora, adoptaremos	esta descripción general para la presente discusión. \\
+
+Volviendo al caso que nos interesa, cualquier posible solución $y = \phi (t)$ (si existe) de la ecuación \eqref{pvi} debe ser una función diferenciable que satisfaga
+	\begin{equation}
+		\phi (t) = y_o + \int _{t_o} ^t f(s,\phi (s)) \dd{s} \label{int}
+	\end{equation}
+para todo $t$ en algún intervalo que contenga a $t_o$. En caso, la ecuación \eqref{int} es llamada ecuación integral asociada a la EDO y es, en general, un ejemplo de ecuación integral de Volterra no homogénea de segundo tipo. \\
+
+En este punto, la existencia de una solución a la EDO está asegurada en el caso de qeu $f(t,y)$ sea continua en $R$, ya que entonces la integral existirá al menos en algún intervalo más pequeño $t_o - \epsilon < t < t_o + \epsilon$ contenido dentro de $\alpha < t < \beta$. Note lo siguiente: 
+
+\begin{itemize}
+	\item Una razón por la que una solución puede no existir hasta el borde de $R$: ¿Qué pasa si el borde de $R$ es una asíntota en la variable $t$?
+	\item Una función no tiene que ser continua para ser integrable (las funciones escalonadas son un ejemplo de funciones integrables que no son continuas). Sin embargo, la integral de una función escalonada es continua. Y si $f(t,y)$ incluye una función escalonada en la ecuación \eqref{pvi}, las soluciones pueden existiendo y ser continuas.
+\end{itemize}
+
+
+En cuanto a la unicidad, supongamos que $f(t,y)$ es continua como antes, y consideremos el siguiente operador $T$, cuyo dominio es el espacio de todas las funciones diferenciales en $R$, que lleva una función $\varphi (t)$ a su imagen $T(\varphi (t))$ (que denotaremos como $T\varphi$ para ayudar a eliminar algunos paréntesis definida por)
+
+	$$ (T\varphi) (t) = y_o + \int _{t_o} ^t f(s,\varphi (s)) \dd{s}. $$
+
+Podemos aplicar $T$ a muchas funciones $\varphi (t)$ y la imagen será una función diferente $T\varphi$ (pero seguirá siendo una función de $t$; véase el ejemplo $2.45$ abajo). Sin embargo, si volvemos a la ecuación \eqref{int}, si aplicamos $T$ a una solución $\phi (t)$ del problema de valor inicial (PVI), la imagen $T\varphi$ debería ser la misma que $\varphi$. Una solución será un punto fijo del sistema dinámico discreto formado por $T$ sobre el espacio de funciones definida y continuas en $R$, ya que $T\varphi = \varphi$. \\
+
+Por lo tanto, en lugar de buscar soluciones al PVI, podemos buscar puntos fijos del operador $T$. ¿Cómo lo hacemos? Afortunadamente, este operador $T$ tiene la bonita propiedad de que es una contracción.
+
+\subsubsection*{Demostración del Teorema}
+
+Por suposición, $f(t,y)$ es Lipschitz continua en $y$ sobre $R$. Por lo tanto hay una constante $M > 0$ donde
+	$$ \abs{f(t,y) - f(t,y_1)} \leq M \abs{y - y_1}, \, \forall \, y,y_1 \, \in \, \R . $$
+Elija un número pequelo $\epsilon = C/M$, donde $C < 1$. Y defina una distancia dentro del conjunto de funciones continuas en el intervalo cerrado $I = [t_o - \epsilon ,t_o + \epsilon]$ por
+	$$ d(g,h) = \max _{t\in I} \abs{g(t) - h(t)}. $$
+Debería comprobar la desigualdad del triángulo para verificar que esto es, en efecto, una métrica en el espacio de funciones continuas sobre $I$. \\
+
+Entonces tenemos
+\begin{align}	
+	d(Tg,Th) &= \max _{t\in I} \abs{Tg(t) - Th(t)} \\
+	&= \max _{t\in I} \abs{y_o + \int _{t_o} ^ t f(s,g(s)) \dd{s} - y_o - \int _{t_o} ^t f(s,h(s)) \dd{s} } \\
+	&= \max _{t\in I} \abs{\int _{t_o} ^ t f(s,g(s)) \dd{s} - \int _{t_o} ^t f(s,h(s)) \dd{s} } \\
+	&\leq \max _{t\in I} \int _{t_o} ^ t \abs{ f(s,g(s)) - f(s,h(s)) } \dd{s} \\
+	&\leq \max _{t\in I} \int _{t_o} ^ t M \abs{ g(s) - h(s) } \dd{s} \\
+	&\leq \max _{t\in I} \int _{t_o} ^ t M d(g,h) \dd{s} \\
+	&\leq \max _{t\in I} \{ M d(g,h) \abs{t - t_o} \} .
+\end{align}
+
+Ahora observe en la última desigualdad que, dado que $I = [t_o - \epsilon ,t_o + \epsilon]$, tenemos
+	$$ \abs{t - t_o} \leq \epsilon = \frac{C}{M}. $$
+Por lo tanto
+	$$ d(Tg,Th) \leq \max _{t\in I} \{ M d(g,h) \abs{t - t_o} \} $$
+	$$ \leq Md(g,h) \frac{C}{M} = Cd(g,h). $$
+Por ende, $T$ es una $C-$contracción y existe un único punto fijo $\phi$ (que es una solución del PVI original) en el intervalo $I$. Aquí
+	$$ \phi (t) = T\phi (t) = y_o + \int _{t_o} ^t f(s,\phi (s)) \dd{s}. $$
+De hecho, podemos utilizar esta construcción para construir una solución a una EDO:
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Ejemplo 2.45}} \\
+		Resuelva el problema de valor inicial $y' = 2t(1 + y),\, y(0) = 0$ utilizando la construcción de interacciones de Picard anterior. \\
+		Aqui, $f(t,y) = 2t(1+y)$ es un polinomio tanto en $t$ como en $y$, de modo que $f$ es obviamente continua en ambas variables, así como Lipschitz continua en $y$, en todo el plano $\R ^2$. Por tanto, existen soluciones únicas en todas partes. Para encontrar realmente una solución, hay que partir de una conjetura inicial. Una obvia es 
+			$$\phi _o (t) = 0 $$
+		Note que esta elección de $\phi _o (t)$ no resuelve la EDO. Pero como el operador $T$ es una contracción, la iteración nos llevará a una solución. Aquí, $\phi _{n + 1} (t) = T\phi _{n} (t)$. Obtenemos
+		\begin{align*}
+			\phi _1 (t) &= T\phi _o (t) ) y_o + \int _0 ^t 2s(1 + \phi _o (s)) \dd{s} = \int _0 ^t 2s (1 + 0) \dd{s} = t^2, \\
+			\phi _2 (t) &= T\phi _1 (t) ) y_o + \int _0 ^t 2s(1 + \phi _1 (s)) \dd{s} = \int _0 ^t 2s (1 + s^2) \dd{s} = t^2 + \frac{1}{2} t^4, \\
+			\phi _3 (t) &= T\phi _2 (t) ) y_o + \int _0 ^t 2s(1 + \phi _2 (s)) \dd{s} = \int _0 ^t 2s (1 + s^2 + \frac{1}{2} s^4) \dd{s} = t^2 + \frac{1}{2} t^4 + \frac{1}{6} t^6, \\
+			\phi _4 (t) &= T\phi _3 (t) ) y_o + \int _0 ^t 2s(1 + \phi _3 (s)) \dd{s} = \int _0 ^t 2s (1 + s^2 + \frac{1}{2} s^4 + \frac{1}{6} s^6) \dd{s} = t^2 + \frac{1}{2} t^4 + \frac{1}{6} t^6 \\
+			&+ \frac{1}{24} t^8.
+		\end{align*}
+	\end{tcolorbox}
+\end{mdframed}
+
+
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Ejemplo 2.46}} \\
+		Sea $\dot{y} = y^{2/3},\, y(0) = 0$, un PVI autónomo de primer orden. Debe ser claro que $y(t) \equiv 0$ es una solución. Pero también lo es
+			$$
+				y_c (t) = \left\{\begin{array}{cc}
+								\frac{1}{27} (t + c)^3 & t < -c, \\
+								0 & t\geq -c, 		
+							\end{array}\right.
+				\forall \, c\geq 0.				
+			$$
+		Hay muchas soluciones que pasan por el origen en el espacio de trayectorias $ty$. Las soluciones existen, pero definitivamente no son únicas aquí. ¿Qué ha fallado al establecer la unicidad de soluciones a este PVI en el Teorema de Picard-Lindelöf? Aquí $f(y) = y^{2/3}$ es ciertamente continua en $y = 0$, pero no es Lipschitz continua allí. De hecho, $f'(y) = \frac{2}{3} y^{-1/3}$ no está definida en $y = 0$, y $\displaystyle\lim _{y\to 0^+} f'(y) = \infty$.
+	\end{tcolorbox}
+\end{mdframed}
+
+
+
+\section*{Minibiografías}
+
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Charles Émile Picard (24 de julio de 1856 - 11 de diciembre de 1941)}} \\
+		Charles Émile Picard fue un eminente matemático francés reconocido por sus trabajos en ecuaciones diferenciales, especialmente en la teoría de funciones analíticas y la teoría de ecuaciones diferenciales ordinarias, siendo pionero en el estudio de las singularidades de las ecuaciones diferenciales y sus soluciones. \\
+		
+		Picard fue profesor en la École Normale Supérieure y en la Sorbona de París, donde escribió un libro de texto clásico sobre análisis y uno de los primeros sobre la teoría de la relatividad.
+	\end{tcolorbox}
+\end{mdframed}
+
+
+
+
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Ernst Leonard Lindelöf (7 de marzo de 1870 - 4 de junio de 1946)}} \\
+		Ernst Leonard Lindelöf, matemático finlandés fue pionero en el estudio de las funciones analíticas, especialmente en lo que respecta a la teoría de funciones de variable compleja. Su obra más destacada, "Le Calcul des Résidus et ses Applications à la Théorie des Fonctions", publicada en 1905, marcó un hito al profundizar en el cálculo de residuos y su aplicación en la teoría de funciones, ampliando así el conocimiento sobre el análisis complejo y las funciones meromorfas. \\
+
+		La contribución más significativa de Lindelöf se centra en su teorema sobre la convergencia de las series de Fourier, conocido como el teorema de Lindelöf, que establece condiciones precisas para la convergencia puntual casi en todas partes de las series de Fourier de funciones integrables. Esta aportación revolucionaria en el campo del análisis matemático ha tenido un impacto profundo en el estudio de la teoría de la aproximación y el análisis armónico, consolidando su lugar entre los grandes matemáticos de su época y sentando las bases para desarrollos posteriores en estos campos.
+	\end{tcolorbox}
+\end{mdframed}
+
+
+
+
+\begin{mdframed}[style=warning]
+	\begin{tcolorbox}[arc=0mm,boxrule=0pt,colframe=white,colback=lightgray!25]
+		{\large \textbf{Rudolf Lipschitz (14 de mayo de 1832 - 7 de octubre de 1903)}} \\
+		Rudolf Lipschitz, matemático alemán reconocido por sus importantes contribuciones al análisis matemático y la teoría de ecuaciones diferenciales. Su obra más destacada se encuentra en el campo de las ecuaciones diferenciales ordinarias, donde formuló el concepto de continuidad de las soluciones en función de los datos iniciales, conocido como la condición de Lipschitz. Este criterio de continuidad ha sido fundamental en el estudio de la existencia y unicidad de soluciones de ecuaciones diferenciales, sentando las bases para investigaciones posteriores en este campo. \\
+		
+		La contribución de Lipschitz en la teoría de ecuaciones diferenciales también se manifiesta en el teorema de existencia y unicidad de las soluciones de ciertos problemas de valor inicial, conocido como el teorema de Picard-Lindelöf o teorema de existencia y unicidad de Lipschitz, que establece condiciones para garantizar la existencia y unicidad de soluciones para ciertos tipos de ecuaciones diferenciales ordinarias.
+	\end{tcolorbox}
+\end{mdframed}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%
