@@ -70,55 +70,85 @@
 \end{abstract}
 
 \begin{IEEEkeywords}
-
+	Juego de la Vida, Conway, Chisme, Autómata Celular, Sistemas dinámicos.
 \end{IEEEkeywords}
 
 \section{Objetivos}
 
 \subsection{General}
     \begin{enumerate}[1.]
-        \item 
+        \item Realizar un modelo de evolución de los rumores (coloquialmente conocidos como chismes) utilziando los autómatas celulares.
     \end{enumerate}
 \subsection{Específicos}
     \begin{enumerate}
-        \item 
-        \item 
-        \item 
+        \item Realizar simulaciones en Python y/o Mathematica del Juego de la Vida de Conway tradicional.
+        \item Modificar el Juego tradicional a un estado extra que interprete como personas suceptibles o interesadas en los rumores.
+        \item Obtener videos o resultados en diferentes formatos de las simulaciones realizadas.
     \end{enumerate}
 %\section{Introducción}
     
 \section{Marco Teórico}
+\subsection{Juego de la Vida de Conway}
+El Juego de la Vida es un autómata celular desarrollado por el matemático británico John Conway en 1970. Aunque es un juego, su diseño se basa en reglas matemáticas simples que modelan la evolución de patrones en una cuadrícula bidimensional.
+
+El juego se enmarca dentro de los autómatas celulares, un modelo matemático que simula sistemas dinámicos discretos compuestos por "celdas" dispuestas en una cuadrícula. Cada celda puede tener un estado específico y sigue reglas predefinidas que determinan cómo cambia su estado en función de los estados de sus vecinas.
+
+Reglas del juego de la vida:
+
+\begin{enumerate}
+	\item El Juego de la Vida se desarrolla en una cuadrícula bidimensional finita o infinita compuesta por celdas cuadradas.
+	\item Cada celda puede estar en uno de dos estados: viva o muerta.
+	\item Cada celda tiene ocho células vecinas: horizontal, vertical y diagonales.
+	\item Las reglas para determinar el estado futuro de una celda se basan en el estado actual y el estado de sus vecinas.
+	\item Reglas de Transición:
+	\begin{itemize}
+		\item Sobrepoblación: Una célula viva muere si tiene más de tres vecinos vivos debido a la escasez de recursos.
+		\item Subpoblación: Una célula viva muere si tiene menos de dos vecinos vivos debido al aislamiento.
+		\item Reproducción: Una célula muerta cobra vida si tiene exactamente tres vecinos vivos, simbolizando la reproducción.
+	\end{itemize}
+	\item Todas las células se actualizan simultáneamente en cada paso de tiempo, creando una nueva "generación" basada en las reglas anteriores.
+\end{enumerate}
+
+
+En cuanto a los límites del espacio celular, existen diferentes enfoques:
+
+\begin{itemize}
+	\item \textbf{Fronteras Finitas: }Se considera que las celdas más allá de los bordes no tienen vecinos, lo que afecta el comportamiento en los bordes.
+	\item \textbf{Fronteras Periódicas:} La cuadrícula se considera como un toroide, donde las celdas en los bordes se conectan con las del lado opuesto, permitiendo un flujo continuo.
+	\item \textbf{Fronteras Infinitas:} Se supone que la cuadrícula se extiende indefinidamente en todas las direcciones, aunque la simulación se enfoca solo en una región finita.
+\end{itemize}
+
+Algunas aplicaciones del Juego de la Vida de Conway son: Modelos de sistemas dinámicos, computación y teoría de la complejidad, arte y entretenimiento (como se verá más delante).
     
     
 \section{Diseño Experimental}
-    \subsection{Materiales a Utilizar}
-        \begin{itemize}
-        \item 2x Protoboard
-    	\item 3x Pulsadores
-    	\item 1x interruptor SPST (o pulsador de enclave)
-    	\item 1x fuente de alimentación (ver apartado anterior con todas las alternativas)
-    	\item 2x capacitores electrolíticos de 47 $\mu$F 16V
-        \item 2x capacitores cerámicos de $100$nF $25$V
-        \item 2x resistencias de $1$ k$\Omega$
-        \item 2x LEDs verdes
-        \item 2x LEDs rojos
-        \item 2x LEDs amarillos
-        \item 6x Resistencias $220\Omega \leq R \leq 1$k$\Omega$
-        \item 2x Resistencias para temporización de reloj
-    	\item 1x Capacitor para temporización de reloj
-        \item 1x Capacitor $10$nF $\leq C \leq 100$nF
-        \item 1x Circuito integrado temporizador 555
-        \item Flip-flops de acuerdo a su diseño
-        \item Las compuertas lógicas a utilizar dependen del diseño final de cada grupo (AND, OR, NOT, XOR, NAND, XNOR)
-        \item 6x metros de alambre para protoboard calibre 22.
-    \end{itemize}
+%    \subsection{Materiales a Utilizar}
+%    	\begin{itemize}
+%        	\item 
+%	    \end{itemize}
 
     \subsection{Procedimientos}
+    
+		Se utilizaron dos lenguajes de programación por diferentes motivos, en Python ya se tenía una interfaz gráfica para modificar y simplemente agregar las especificaciones necesarias, mientras que en Mathematica se tiene la opción de generan un video con el modelo.    	
+    	
+    \subsubsection{Python}
         \begin{enumerate}
-            \item 
-            \item 
-            \item 
+            \item Utilizando el lenguaje de programación de Python se genera una interfaz gráfica.
+            \item Se crea el código referente al juego de la vida.
+            \item Se modifica al añadir el nuevo estado.
+            \item Se exporta el archivo en imagen o en archivo de texto.
         \end{enumerate}
+        
+        
+	\subsubsection{Mathematica}
+        \begin{enumerate}
+            \item Utilizando el lenguaje de programación de WolframAlpha (Mathematica) se modela el juego de la vida y se modifica para añadir el nuevo estado.
+            \item Se exporta el archivo en \textit{.mp4}.
+        \end{enumerate}        
+        
+        
+        
+        
 \section{Resultados}
     
 \section{Conclusiones}
