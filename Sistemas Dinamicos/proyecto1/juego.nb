@@ -10,86 +10,982 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3448,        104]
-NotebookOptionsPosition[      3095,         90]
-NotebookOutlinePosition[      3495,        106]
-CellTagsIndexPosition[      3452,        103]
+NotebookDataLength[     41513,       1063]
+NotebookOptionsPosition[     37356,        986]
+NotebookOutlinePosition[     37747,       1002]
+CellTagsIndexPosition[     37704,        999]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Proyecto - Salseo", "Title",
+ CellChangeTimes->{{3.9095150870352097`*^9, 
+  3.909515092832324*^9}},ExpressionUUID->"8aa95573-eab2-4437-a021-\
+82f1926e7545"],
+
+Cell["\<\
+Curso: Sistemas Din\[AAcute]micos
+Catedratico: Lic. Jos\[EAcute] Bonilla
+Alumno: Diego Sarce\[NTilde]o 201900109\
+\>", "Text",
+ CellChangeTimes->{{3.909515099528391*^9, 
+  3.9095151295292253`*^9}},ExpressionUUID->"c9e57010-0454-4b1f-8c6c-\
+72eaeb19ce48"],
+
+Cell[CellGroupData[{
+
+Cell["Implementaci\[OAcute]n Juego de la Vida (Conway)", "Section",
+ CellChangeTimes->{{3.909515137135851*^9, 
+  3.909515146864112*^9}},ExpressionUUID->"3f137a86-b5b7-4379-8ae1-\
+7a862e75f626"],
+
 Cell[BoxData[
  RowBox[{
-  RowBox[{"ConwayStep", "[", "board_", "]"}], ":=", 
+  RowBox[{"SumaVecinos", "[", 
+   RowBox[{"matriz_", ",", "fila_", ",", "columna_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Variables", " ", "locales"}], " ", "*)"}], "\[IndentingNewLine]", 
+  
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", 
-     RowBox[{"m", ",", "n", ",", "neighbors", ",", "newboard"}], "}"}], ",", 
+     RowBox[{"filas", ",", "columnas", ",", "vecinos"}], "}"}], ",", 
     RowBox[{
      RowBox[{
       RowBox[{"{", 
-       RowBox[{"m", ",", "n"}], "}"}], "=", 
-      RowBox[{"Dimensions", "[", "board", "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"newboard", "=", 
+       RowBox[{"filas", ",", "columnas"}], "}"}], "=", 
+      RowBox[{"Dimensions", "[", "matriz", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"vecinos", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"i", ",", "j"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              RowBox[{"fila", "-", "1"}], ",", 
+              RowBox[{"fila", "+", "1"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", 
+              RowBox[{"columna", "-", "1"}], ",", 
+              RowBox[{"columna", "+", "1"}]}], "}"}]}], "]"}], ",", "1"}], 
+         "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "!=", 
+           RowBox[{"{", 
+            RowBox[{"fila", ",", "columna"}], "}"}]}], "&&", 
+          RowBox[{"1", "<=", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "<=", "filas"}], "&&", 
+          RowBox[{"1", "<=", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "<=", "columnas"}]}], "&"}]}], 
+       "]"}]}], ";", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Vecinospara", " ", "una", " ", "entrada"}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"Total", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Part", "[", 
+         RowBox[{"matriz", ",", 
+          RowBox[{"Sequence", "@@", "#"}]}], "]"}], "&"}], "/@", "vecinos"}], 
+      "]"}]}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Suma", " ", "de", " ", "esos", " ", "vecinos"}], " ", 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.909511342789328*^9, 3.9095113427897377`*^9}, {
+  3.909515164585478*^9, 3.909515185545817*^9}, {3.909516494676167*^9, 
+  3.909516518364601*^9}},ExpressionUUID->"3e0cbc2b-4661-4375-91cf-\
+96ad433b3b5a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stepConway", "[", "matriz_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"filas", ",", "columnas", ",", "vecinos", ",", "matrizStep"}], 
+     "}"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"filas", ",", "columnas"}], "}"}], "=", 
+      RowBox[{"Dimensions", "[", "matriz", "]"}]}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Variables", " ", "Locales"}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"matrizStep", "=", 
       RowBox[{"Table", "[", 
        RowBox[{"0", ",", 
         RowBox[{"{", 
-         RowBox[{"i", ",", "m"}], "}"}], ",", 
+         RowBox[{"i", ",", "filas"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"j", ",", "n"}], "}"}]}], "]"}]}], ";", 
+         RowBox[{"j", ",", "columnas"}], "}"}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
-     RowBox[{"(*", 
+     RowBox[{"(*", " ", 
       RowBox[{
-      "Calcular", " ", "el", " ", "estado", " ", "siguiente", " ", "para", 
-       " ", "cada", " ", "celda"}], "*)"}], 
+       RowBox[{
+       "Estado", " ", "de", " ", "siguiente", " ", "para", " ", "cada", " ", 
+        "celda"}], ",", " ", 
+       RowBox[{
+       "en", " ", "base", " ", "al", " ", "valor", " ", "dado", " ", "por", 
+        " ", "SumaVecinos"}]}], " ", "*)"}], 
      RowBox[{"Do", "[", 
       RowBox[{
        RowBox[{
-        RowBox[{"neighbors", "=", 
-         RowBox[{"Total", "@", 
-          RowBox[{"Extract", "[", 
-           RowBox[{"board", ",", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"i", "-", "1"}], ",", "i", ",", 
-                RowBox[{"i", "+", "1"}]}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"j", "-", "1"}], ",", "j", ",", 
-                RowBox[{"j", "+", "1"}]}], "}"}]}], "}"}], ",", 
-            RowBox[{
-             RowBox[{"Mod", "[", 
-              RowBox[{
-               RowBox[{"#", "+", "m", "-", "1"}], ",", "m", ",", "1"}], "]"}],
-              "&"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"vecinos", "=", 
+         RowBox[{"SumaVecinos", "[", 
+          RowBox[{"matriz", ",", "i", ",", "j"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"newboard", "[", 
+         RowBox[{"matrizStep", "[", 
           RowBox[{"[", 
            RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
          RowBox[{"If", "[", 
           RowBox[{
            RowBox[{
-            RowBox[{"neighbors", "==", "3"}], "||", 
+            RowBox[{"vecinos", "==", "3"}], "||", 
             RowBox[{"(", 
              RowBox[{
-              RowBox[{"neighbors", "==", "4"}], "&&", 
+              RowBox[{"vecinos", "==", "2"}], "&&", 
               RowBox[{
-               RowBox[{"board", "[", 
+               RowBox[{"matriz", "[", 
                 RowBox[{"[", 
                  RowBox[{"i", ",", "j"}], "]"}], "]"}], "==", "1"}]}], 
              ")"}]}], ",", "1", ",", "0"}], "]"}]}]}], ",", 
        RowBox[{"{", 
-        RowBox[{"i", ",", "m"}], "}"}], ",", 
+        RowBox[{"i", ",", "filas"}], "}"}], ",", 
        RowBox[{"{", 
-        RowBox[{"j", ",", "n"}], "}"}]}], "]"}], ";", "\[IndentingNewLine]", 
-     "newboard"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.9094067497974253`*^9, 3.909406749797768*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"3d7eff02-173f-4826-baa7-64758211276d"]
+        RowBox[{"j", ",", "columnas"}], "}"}]}], "]"}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"Condiciones", "/", "reglas"}], " ", "del", " ", "juego"}], 
+      " ", "*)"}], "\[IndentingNewLine]", "matrizStep"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.909512609042995*^9, 3.9095126580793257`*^9}, {
+  3.9095128449633083`*^9, 3.909512845052546*^9}, {3.909516531716502*^9, 
+  3.909516588706869*^9}, {3.9095167782549067`*^9, 3.909516886708212*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"f1ef5eae-8b79-4e30-bbb8-1ca0b511c65f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"animacionConway", "[", 
+   RowBox[{"mInicial_", ",", "iteraciones_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"frames", ",", "matriz"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"matriz", "=", "mInicial"}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Variables", " ", "locales"}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"frames", "=", 
+      RowBox[{"{", 
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"matriz", ",", 
+         RowBox[{"Mesh", "->", "True"}]}], "]"}], "}"}]}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"asignar", " ", "cada", " ", "matriz", " ", 
+       RowBox[{"(", "plot", ")"}], " ", "a", " ", "un", " ", "frame"}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"matriz", "=", 
+         RowBox[{"stepConway", "[", "matriz", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"frames", ",", 
+          RowBox[{"ArrayPlot", "[", 
+           RowBox[{"matriz", ",", 
+            RowBox[{"Mesh", "->", "True"}]}], "]"}]}], "]"}]}], ",", 
+       RowBox[{"{", "iteraciones", "}"}]}], "]"}], ";", 
+     RowBox[{"(*", " ", 
+      RowBox[{"asignar", " ", "cada", " ", "matriz", " ", 
+       RowBox[{"(", "plot", ")"}], " ", "a", " ", "un", " ", "frame"}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+      "\"\</home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/test3.gif\>\"", ",", "frames", ",", 
+       RowBox[{"\"\<FrameRate\>\"", "->", "5"}]}], "]"}]}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Exportarlo", " ", "en", " ", "la", " ", "carpeta", " ", "deseada"}], " ", 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.909512938892359*^9, 3.9095129388940477`*^9}, {
+   3.909516786168065*^9, 3.909516789109717*^9}, {3.9095169548922443`*^9, 
+   3.909516956556266*^9}, {3.9095171571997633`*^9, 3.9095172145088177`*^9}, 
+   3.909521220049019*^9, {3.909521266513932*^9, 3.909521339807757*^9}, {
+   3.90952141580305*^9, 3.909521415962419*^9}, {3.909521510186863*^9, 
+   3.909521525961396*^9}, {3.909521854988317*^9, 3.909521880375448*^9}, {
+   3.909521923861705*^9, 3.9095219239745617`*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"570ed3c9-3385-4a37-898a-15b74208c413"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Modificandolo para un estado extra", "Section",
+ CellChangeTimes->{{3.909520233495994*^9, 
+  3.909520238875451*^9}},ExpressionUUID->"789eac97-adda-414b-b775-\
+66b34eaeea10"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Misma", " ", "funci\[OAcute]n", " ", "excepto", " ", "que", " ", "no", 
+    " ", "toma", " ", "en", " ", "cuenta", " ", "el", " ", "estado", " ", 
+    "probabilistico"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SumaVecinosMod", "[", 
+    RowBox[{"matriz_", ",", "fila_", ",", "columna_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"filas", ",", "columnas", ",", "vecinos"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"filas", ",", "columnas"}], "}"}], "=", 
+       RowBox[{"Dimensions", "[", "matriz", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"vecinos", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{"Flatten", "[", 
+          RowBox[{
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"i", ",", "j"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", 
+               RowBox[{"fila", "-", "1"}], ",", 
+               RowBox[{"fila", "+", "1"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", 
+               RowBox[{"columna", "-", "1"}], ",", 
+               RowBox[{"columna", "+", "1"}]}], "}"}]}], "]"}], ",", "1"}], 
+          "]"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "!=", 
+            RowBox[{"{", 
+             RowBox[{"fila", ",", "columna"}], "}"}]}], "&&", 
+           RowBox[{"1", "<=", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "<=", "filas"}], "&&", 
+           RowBox[{"1", "<=", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "<=", "columnas"}]}], "&"}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Total", "[", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Part", "[", 
+            RowBox[{"matriz", ",", 
+             RowBox[{"Sequence", "@@", "#"}]}], "]"}], "&"}], "/@", 
+          "vecinos"}], ",", 
+         RowBox[{
+          RowBox[{"#", "!=", "2"}], "&"}]}], "]"}], "]"}]}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.9095230928113194`*^9, 3.90952313497581*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"e137ddad-c52e-4f70-bfb2-7110658903ef"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stepConwayProb", "[", "matriz_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"filas", ",", "columnas", ",", "vecinos", ",", "matrizStep"}], 
+     "}"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"filas", ",", "columnas"}], "}"}], "=", 
+      RowBox[{"Dimensions", "[", "matriz", "]"}]}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Variables", " ", "Locales"}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"matrizStep", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "filas"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "columnas"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "Estado", " ", "de", " ", "siguiente", " ", "para", " ", "cada", " ", 
+        "celda"}], ",", " ", 
+       RowBox[{
+       "en", " ", "base", " ", "al", " ", "valor", " ", "dado", " ", "por", 
+        " ", "SumaVecinos"}]}], " ", "*)"}], 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"vecinos", "=", 
+         RowBox[{"SumaVecinosMod", "[", 
+          RowBox[{"matriz", ",", "i", ",", "j"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"matrizStep", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"matriz", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j"}], "]"}], "]"}], "==", "2"}], ",", 
+           RowBox[{
+            RowBox[{"matrizStep", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
+            RowBox[{"RandomChoice", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.15", ",", "0.50", ",", "0.35"}], "}"}], "->", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1", ",", "2"}], "}"}]}], "]"}]}], ",", " ", 
+           
+           RowBox[{"(*", " ", 
+            RowBox[{
+            "Eleccion", " ", "del", " ", "resultado", " ", "para", " ", "el", 
+             " ", "estado", " ", "probabilistico", " ", "dado", " ", "por", 
+             " ", "2"}], " ", "*)"}], 
+           RowBox[{
+            RowBox[{"matrizStep", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"vecinos", "==", "3"}], "||", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"vecinos", "==", "2"}], "&&", 
+                 RowBox[{
+                  RowBox[{"matriz", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "==", "1"}]}], 
+                ")"}]}], ",", "1", ",", "0"}], "]"}]}]}], "]"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "filas"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "columnas"}], "}"}]}], "]"}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"Condiciones", "/", "reglas"}], " ", "del", " ", "juego"}], 
+      " ", "*)"}], "\[IndentingNewLine]", "matrizStep"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.90952026091181*^9, 3.909520314817936*^9}, {
+   3.909520355250141*^9, 3.9095203977376413`*^9}, {3.909520502251966*^9, 
+   3.909520537116582*^9}, {3.909520609049734*^9, 3.9095206336108723`*^9}, 
+   3.909523144906955*^9, {3.909523241617482*^9, 3.909523258853713*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"7b4138a0-e08d-430d-a026-311db778e2b6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"animacionConwayProb", "[", 
+   RowBox[{"mInicial_", ",", "iteraciones_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"frames", ",", "matriz"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"matriz", "=", "mInicial"}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Variables", " ", "locales"}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"frames", "=", 
+      RowBox[{"{", 
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"matriz", ",", 
+         RowBox[{"Mesh", "->", "True"}], ",", 
+         RowBox[{"ColorRules", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"0", "->", "Black"}], ",", 
+            RowBox[{"1", "->", "White"}], ",", 
+            RowBox[{"2", "->", "Gray"}]}], "}"}]}]}], "]"}], "}"}]}], ";", 
+     " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"asignar", " ", "cada", " ", "matriz", " ", 
+       RowBox[{"(", "plot", ")"}], " ", "a", " ", "un", " ", "frame"}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"matriz", "=", 
+         RowBox[{"stepConway", "[", "matriz", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"frames", ",", 
+          RowBox[{"ArrayPlot", "[", 
+           RowBox[{"matriz", ",", 
+            RowBox[{"Mesh", "->", "True"}], ",", 
+            RowBox[{"ColorRules", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"0", "->", "Black"}], ",", 
+               RowBox[{"1", "->", "White"}], ",", 
+               RowBox[{"2", "->", "Gray"}]}], "}"}]}]}], "]"}]}], "]"}]}], 
+       ",", 
+       RowBox[{"{", "iteraciones", "}"}]}], "]"}], ";", 
+     RowBox[{"(*", " ", 
+      RowBox[{"asignar", " ", "cada", " ", "matriz", " ", 
+       RowBox[{"(", "plot", ")"}], " ", "a", " ", "un", " ", "frame"}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+      "\"\</home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/mtest1.gif\>\"", ",", "frames", ",", 
+       RowBox[{"\"\<FrameRate\>\"", "->", "5"}]}], "]"}]}]}], "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Exportarlo", " ", "en", " ", "la", " ", "carpeta", " ", "deseada"}], " ", 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.909521977104596*^9, 3.9095219774402857`*^9}, {
+  3.909522117276202*^9, 3.909522120181224*^9}, {3.909522168537023*^9, 
+  3.909522251335807*^9}, {3.909522914161078*^9, 3.909522914297484*^9}, {
+  3.90952296488237*^9, 3.909522965005354*^9}, {3.909523285711975*^9, 
+  3.909523306588076*^9}, {3.909523451403138*^9, 3.90952345147297*^9}},
+ CellLabel->"In[93]:=",ExpressionUUID->"e08391a6-2db1-4e83-a501-9ebc002b14db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Matrices de Prueba", "Section",
+ CellChangeTimes->{{3.909520874504341*^9, 
+  3.90952088584361*^9}},ExpressionUUID->"52ba11c0-97d1-4a3f-bf4e-\
+4c6a13ad9f72"],
+
+Cell[CellGroupData[{
+
+Cell["Original", "Subsection",
+ CellChangeTimes->{{3.9095209066263933`*^9, 
+  3.909520907384472*^9}},ExpressionUUID->"fa91a127-169a-45ab-87dd-\
+d81fa5a7fc61"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"name", "=", 
+  "\"\</home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/nombre.gif\>\""}]], "Input",
+ CellChangeTimes->{{3.9095215315586033`*^9, 3.90952154865819*^9}, {
+  3.909521586288218*^9, 3.909521637668832*^9}, {3.9095216698544407`*^9, 
+  3.909521683396323*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"e1c92a15-529f-40da-b46b-b1a1bf14f0be"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/nombre.gif\"\>"], "Output",
+ CellChangeTimes->{
+  3.909521538545093*^9, {3.909521622094265*^9, 3.90952164020532*^9}, 
+   3.909521685573131*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"b8b2ae31-3023-4013-8480-90bafadb9681"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrixTest", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}],
+   "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConway", "[", 
+  RowBox[{"matrixTest", ",", "6"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.909508354099905*^9, 3.9095083733811483`*^9}, {
+  3.909508470571094*^9, 3.909508498481806*^9}, {3.909521164208789*^9, 
+  3.909521175319367*^9}, {3.909521803705451*^9, 3.909521849974687*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"d26fe365-b6b0-43a5-8fd2-9d5340008a74"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0", "0", "0"},
+     {"0", "0", "1", "0", "0"},
+     {"0", "0", "1", "0", "0"},
+     {"0", "0", "1", "0", "0"},
+     {"0", "0", "0", "0", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.909508500709573*^9, {3.9095211541330833`*^9, 3.909521176593196*^9}, 
+   3.9095212298317957`*^9, 3.909521407518124*^9, 3.909521439704352*^9, 
+   3.909521821386321*^9, 3.909521867742528*^9},
+ CellLabel->
+  "Out[30]//MatrixForm=",ExpressionUUID->"52b4a17d-99e4-4489-9a3b-\
+72bbea49ea8c"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/test1.gif\"\>"], "Output",
+ CellChangeTimes->{
+  3.909508500709573*^9, {3.9095211541330833`*^9, 3.909521176593196*^9}, 
+   3.9095212298317957`*^9, 3.909521407518124*^9, 3.909521439704352*^9, 
+   3.909521821386321*^9, 3.9095218681657887`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"0d9da535-0a99-4f95-b424-5d273e86392a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrixTest2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "1", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "1", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}],
+   "\n", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConway", "[", 
+  RowBox[{"matrixTest2", ",", "10"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9095209313202877`*^9, 3.909520946620441*^9}, 
+   3.909521106804064*^9, {3.9095214958586273`*^9, 3.90952150141053*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"ed8f7fde-e201-4745-b674-eceb1ae1fbad"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "0", "0", "0"},
+     {"0", "1", "1", "1", "0"},
+     {"0", "1", "0", "1", "0"},
+     {"0", "1", "1", "1", "0"},
+     {"0", "0", "0", "0", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.9095211092686033`*^9, 3.9095218874425077`*^9},
+ CellLabel->
+  "Out[33]//MatrixForm=",ExpressionUUID->"7da8fad0-116d-4f9a-a55f-\
+91e18b1a0936"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/test2.gif\"\>"], "Output",
+ CellChangeTimes->{3.9095211092686033`*^9, 3.909521888097595*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"d2dfd100-1ba1-4683-8f75-bde616b7cfeb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrixTest3", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}]}], 
+    "}"}]}], "\n", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConway", "[", 
+  RowBox[{"matrixTest3", ",", "15"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.909521134551654*^9, 3.909521144906672*^9}, {
+  3.909521907387457*^9, 3.909521947002687*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"64d74e57-6827-4671-93b9-3f9672bfb1a6"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "1", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "1", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "1", "0", "0"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"1", "0", "0", "0", "0", "1", "0", "1", "0", "0", "0", "0", "1"},
+     {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "1", "1", "1", "0", "0", "0", "1", "1", "1", "0", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.909521145657896*^9, {3.909521929751822*^9, 3.909521947560272*^9}},
+ CellLabel->
+  "Out[38]//MatrixForm=",ExpressionUUID->"369d94d3-c2c2-47d8-b89f-\
+d2b6fad8d773"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/test3.gif\"\>"], "Output",
+ CellChangeTimes->{
+  3.909521145657896*^9, {3.909521929751822*^9, 3.9095219484622803`*^9}},
+ CellLabel->"Out[39]=",ExpressionUUID->"6f9d70ca-d02c-451d-9cb4-935a68fa4f4a"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Modificado", "Subsection",
+ CellChangeTimes->{{3.909520912150906*^9, 
+  3.9095209132501*^9}},ExpressionUUID->"a0bec520-4c32-40e1-b699-f4bdad1762b9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "1234", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrizMTest1", "=", 
+   RowBox[{"RandomChoice", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.65", ",", "0.20", ",", "0.15"}], "}"}], "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1", ",", "2"}], "}"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"15", ",", "15"}], "}"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConwayProb", "[", 
+  RowBox[{"matrizMTest1", ",", "30"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9095223703655443`*^9, 3.909522386851119*^9}, {
+  3.909522569935082*^9, 3.909522571663719*^9}, {3.909522728591691*^9, 
+  3.9095227432340717`*^9}, {3.909522801540985*^9, 3.90952280770761*^9}, {
+  3.909523389692883*^9, 3.909523439299552*^9}, {3.909523483819952*^9, 
+  3.909523511846621*^9}},
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"02ce88e6-aa01-469e-9586-9d0bfd9b7c54"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"2", "0", "0", "0", "0", "2", "0", "0", "0", "1", "2", "0", "0", "2", 
+      "0"},
+     {"0", "2", "0", "2", "0", "0", "1", "1", "1", "0", "0", "1", "0", "0", 
+      "0"},
+     {"1", "0", "0", "2", "0", "1", "2", "0", "1", "0", "1", "1", "0", "0", 
+      "0"},
+     {"0", "1", "0", "2", "0", "2", "0", "0", "2", "1", "0", "2", "0", "0", 
+      "0"},
+     {"1", "0", "0", "1", "2", "0", "0", "2", "0", "1", "0", "0", "2", "0", 
+      "0"},
+     {"0", "0", "0", "2", "2", "2", "0", "2", "0", "0", "0", "0", "0", "0", 
+      "0"},
+     {"0", "1", "1", "2", "1", "0", "0", "1", "0", "0", "2", "0", "1", "2", 
+      "1"},
+     {"2", "0", "1", "0", "0", "2", "0", "0", "0", "0", "1", "2", "1", "0", 
+      "0"},
+     {"0", "0", "0", "2", "0", "2", "2", "1", "1", "0", "0", "0", "1", "0", 
+      "0"},
+     {"0", "0", "2", "0", "0", "0", "0", "0", "1", "0", "0", "2", "0", "0", 
+      "2"},
+     {"1", "1", "1", "0", "0", "1", "2", "0", "0", "0", "1", "0", "0", "0", 
+      "0"},
+     {"0", "0", "2", "0", "1", "0", "2", "2", "0", "2", "0", "2", "0", "0", 
+      "0"},
+     {"0", "2", "1", "0", "0", "2", "2", "0", "1", "0", "0", "1", "0", "0", 
+      "0"},
+     {"1", "2", "0", "2", "2", "0", "2", "1", "0", "2", "0", "0", "0", "0", 
+      "2"},
+     {"1", "2", "0", "0", "2", "0", "1", "1", "0", "0", "2", "0", "0", "0", 
+      "2"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.909522387641203*^9, 3.909522390257311*^9}, {
+   3.9095225468689327`*^9, 3.909522575342497*^9}, 3.909522745384081*^9, 
+   3.909522808268845*^9, {3.909523413905422*^9, 3.909523454866684*^9}, {
+   3.9095235126591053`*^9, 3.909523517135264*^9}},
+ CellLabel->
+  "Out[101]//MatrixForm=",ExpressionUUID->"46eb6c45-5850-445e-8a58-\
+cdc01f1ea448"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/mtest1.gif\"\>"], "Output",
+ CellChangeTimes->{{3.909522387641203*^9, 3.909522390257311*^9}, {
+   3.9095225468689327`*^9, 3.909522575342497*^9}, 3.909522745384081*^9, 
+   3.909522808268845*^9, {3.909523413905422*^9, 3.909523454866684*^9}, {
+   3.9095235126591053`*^9, 3.9095235185671883`*^9}},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"3adf31d6-b4bd-4e8d-ac64-232504bdd9af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrizMTest2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "0", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0"}], "}"}]}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConwayProb", "[", 
+  RowBox[{"matrizMTest2", ",", "10"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.909522625157942*^9, 3.909522638608513*^9}, {
+  3.909522879352597*^9, 3.909522888385653*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"ce18c381-1214-4f71-a3dc-8e0177297baf"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "2", "0"},
+     {"2", "0", "2"},
+     {"0", "2", "0"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.909522642277541*^9, {3.909522889202965*^9, 3.909522927866946*^9}, 
+   3.909523290161552*^9},
+ CellLabel->
+  "Out[79]//MatrixForm=",ExpressionUUID->"085b0bb5-b761-4429-86ea-\
+05c02afa14c0"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/mtest2.gif\"\>"], "Output",
+ CellChangeTimes->{
+  3.909522642277541*^9, {3.909522889202965*^9, 3.909522927866946*^9}, 
+   3.9095232908209963`*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"3554024a-aa89-4c47-aa5c-bf71b21032e1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrizMTest3", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "2", ",", "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "2", ",", "0", ",", "1"}], "}"}]}], "}"}]}],
+   "\n", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConwayProb", "[", 
+  RowBox[{"matrizMTest3", ",", "25"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9095226565958567`*^9, 3.909522662443179*^9}, {
+  3.9095229545467873`*^9, 3.9095229578862123`*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"8b51239a-75f2-4623-b86b-edcd0d875567"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "2", "0", "2", "0"},
+     {"1", "0", "2", "0", "1"},
+     {"0", "2", "0", "2", "0"},
+     {"1", "0", "2", "0", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.909522663080223*^9, 3.909522968560446*^9, 
+  3.909523154260005*^9, 3.909523271138266*^9},
+ CellLabel->
+  "Out[76]//MatrixForm=",ExpressionUUID->"563d2f9b-3151-4111-98a6-\
+80cdcb857ee6"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/mtest3.gif\"\>"], "Output",
+ CellChangeTimes->{3.909522663080223*^9, 3.909522968560446*^9, 
+  3.909523154260005*^9, 3.9095232724998198`*^9},
+ CellLabel->"Out[77]=",ExpressionUUID->"a7dff9e9-a1cd-4f58-b61f-71e516016ebf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"matrizMTest4", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "2", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1", ",", "0", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "0", ",", "0", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0", ",", "0", ",", "1"}], "}"}]}], "}"}]}],
+   "\n", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"animacionConwayProb", "[", 
+  RowBox[{"matrizMTest4", ",", "25"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.909522672285437*^9, 3.909522678993546*^9}, {
+  3.909523315456379*^9, 3.909523323310359*^9}},
+ CellLabel->"In[91]:=",ExpressionUUID->"13e2a891-08b2-4dbe-942f-1848076f8b2a"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "2", "0", "0"},
+     {"0", "1", "0", "2", "0"},
+     {"0", "0", "1", "0", "2"},
+     {"2", "0", "0", "1", "0"},
+     {"0", "2", "0", "0", "1"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.909522680917726*^9, 3.909523323592744*^9, 
+  3.9095234454439173`*^9},
+ CellLabel->
+  "Out[91]//MatrixForm=",ExpressionUUID->"38c007e8-002f-4526-83d2-\
+65e5ece3160c"],
+
+Cell[BoxData["\<\"/home/diego/Trabajos/Semestre10/Sistemas \
+Dinamicos/proyecto1/img_vid/mtest4.gif\"\>"], "Output",
+ CellChangeTimes->{3.909522680917726*^9, 3.909523323592744*^9, 
+  3.909523446315172*^9},
+ CellLabel->"Out[92]=",ExpressionUUID->"59bc3692-9e39-46d2-a7c6-f43e4f752eb6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 },
-WindowSize->{606., 659.25},
-WindowMargins->{{415.5, Automatic}, {48, Automatic}},
+WindowSize->{720, 762},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"13.0 for Linux x86 (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"a102b9e0-645a-4f87-aa9e-c58902eb65b0"
@@ -105,10 +1001,71 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2533, 68, 257, "Input",ExpressionUUID->"3d7eff02-173f-4826-baa7-64758211276d"]
+Cell[CellGroupData[{
+Cell[580, 22, 162, 3, 98, "Title",ExpressionUUID->"8aa95573-eab2-4437-a021-82f1926e7545"],
+Cell[745, 27, 264, 7, 81, "Text",ExpressionUUID->"c9e57010-0454-4b1f-8c6c-72eaeb19ce48"],
+Cell[CellGroupData[{
+Cell[1034, 38, 193, 3, 68, "Section",ExpressionUUID->"3f137a86-b5b7-4379-8ae1-7a862e75f626"],
+Cell[1230, 43, 2327, 64, 195, "Input",ExpressionUUID->"3e0cbc2b-4661-4375-91cf-96ad433b3b5a"],
+Cell[3560, 109, 2540, 67, 195, "Input",ExpressionUUID->"f1ef5eae-8b79-4e30-bbb8-1ca0b511c65f"],
+Cell[6103, 178, 2381, 54, 236, "Input",ExpressionUUID->"570ed3c9-3385-4a37-898a-15b74208c413"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8521, 237, 179, 3, 68, "Section",ExpressionUUID->"789eac97-adda-414b-b775-66b34eaeea10"],
+Cell[8703, 242, 2363, 63, 174, "Input",ExpressionUUID->"e137ddad-c52e-4f70-bfb2-7110658903ef"],
+Cell[11069, 307, 3692, 94, 278, "Input",ExpressionUUID->"7b4138a0-e08d-430d-a026-311db778e2b6"],
+Cell[14764, 403, 2765, 66, 298, "Input",ExpressionUUID->"e08391a6-2db1-4e83-a501-9ebc002b14db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17566, 474, 162, 3, 68, "Section",ExpressionUUID->"52ba11c0-97d1-4a3f-bf4e-4c6a13ad9f72"],
+Cell[CellGroupData[{
+Cell[17753, 481, 158, 3, 54, "Subsection",ExpressionUUID->"fa91a127-169a-45ab-87dd-d81fa5a7fc61"],
+Cell[CellGroupData[{
+Cell[17936, 488, 389, 7, 71, "Input",ExpressionUUID->"e1c92a15-529f-40da-b46b-b1a1bf14f0be"],
+Cell[18328, 497, 311, 5, 55, "Output",ExpressionUUID->"b8b2ae31-3023-4013-8480-90bafadb9681"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18676, 507, 986, 21, 92, "Input",ExpressionUUID->"d26fe365-b6b0-43a5-8fd2-9d5340008a74"],
+Cell[19665, 530, 917, 25, 113, "Output",ExpressionUUID->"52b4a17d-99e4-4489-9a3b-72bbea49ea8c"],
+Cell[20585, 557, 409, 6, 55, "Output",ExpressionUUID->"0d9da535-0a99-4f95-b424-5d273e86392a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21031, 568, 924, 20, 113, "Input",ExpressionUUID->"ed8f7fde-e201-4745-b674-eceb1ae1fbad"],
+Cell[21958, 590, 772, 22, 113, "Output",ExpressionUUID->"7da8fad0-116d-4f9a-a55f-91e18b1a0936"],
+Cell[22733, 614, 260, 3, 55, "Output",ExpressionUUID->"d2dfd100-1ba1-4683-8f75-bde616b7cfeb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23030, 622, 2879, 62, 216, "Input",ExpressionUUID->"64d74e57-6827-4671-93b9-3f9672bfb1a6"],
+Cell[25912, 686, 1571, 31, 251, "Output",ExpressionUUID->"369d94d3-c2c2-47d8-b89f-d2b6fad8d773"],
+Cell[27486, 719, 287, 4, 55, "Output",ExpressionUUID->"6f9d70ca-d02c-451d-9cb4-935a68fa4f4a"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27822, 729, 154, 2, 38, "Subsection",ExpressionUUID->"a0bec520-4c32-40e1-b699-f4bdad1762b9"],
+Cell[CellGroupData[{
+Cell[28001, 735, 975, 23, 92, "Input",ExpressionUUID->"02ce88e6-aa01-469e-9586-9d0bfd9b7c54"],
+Cell[28979, 760, 2144, 50, 285, "Output",ExpressionUUID->"46eb6c45-5850-445e-8a58-cdc01f1ea448"],
+Cell[31126, 812, 465, 7, 55, "Output",ExpressionUUID->"3adf31d6-b4bd-4e8d-ac64-232504bdd9af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31628, 824, 652, 16, 51, "Input",ExpressionUUID->"ce18c381-1214-4f71-a3dc-8e0177297baf"],
+Cell[32283, 842, 727, 22, 79, "Output",ExpressionUUID->"085b0bb5-b761-4429-86ea-05c02afa14c0"],
+Cell[33013, 866, 314, 5, 55, "Output",ExpressionUUID->"3554024a-aa89-4c47-aa5c-bf71b21032e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33364, 876, 817, 18, 113, "Input",ExpressionUUID->"8b51239a-75f2-4623-b86b-edcd0d875567"],
+Cell[34184, 896, 783, 22, 96, "Output",ExpressionUUID->"563d2f9b-3151-4111-98a6-80cdcb857ee6"],
+Cell[34970, 920, 308, 4, 55, "Output",ExpressionUUID->"a7dff9e9-a1cd-4f58-b61f-71e516016ebf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35315, 929, 904, 20, 113, "Input",ExpressionUUID->"13e2a891-08b2-4dbe-942f-1848076f8b2a"],
+Cell[36222, 951, 795, 23, 113, "Output",ExpressionUUID->"38c007e8-002f-4526-83d2-65e5ece3160c"],
+Cell[37020, 976, 284, 4, 104, "Output",ExpressionUUID->"59bc3692-9e39-46d2-a7c6-f43e4f752eb6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
