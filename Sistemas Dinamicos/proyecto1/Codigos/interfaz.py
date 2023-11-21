@@ -1,11 +1,16 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# vie 20 oct 2023
+# interfaz.py
+# Diego Sarceno (dsarceno68@gmail.com)
 
-# @Author: Diego Sarceno
-# Date: 22.10.2020
+# Interfaz gráfica que modela el juego de la vida de conway y la modificación
+# mencionada en el protocolo y el informe del proyecto.
 
+# Codificado del texto: UTF8
+# Compiladores probados: python3 (Ubuntu 20.04 Linux) 3.8.10
+# Instruciones de Ejecución: no requiere nada mas
+# python3 interfaz.py
 
-# Modulos Requeridos
+# Librerias
 import gi
 gi.require_version('Gtk','3.0')
 from gi.repository import Gtk
