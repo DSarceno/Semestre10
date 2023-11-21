@@ -614,10 +614,10 @@ class ventana(Gtk.Window):
         plt.show()
 
     def helpAD_activate(self, widget):
-        webbrowser.open_new_tab('https://github.com/DSarceno/programacionMatematica1/blob/master/Practica2/README.md')
+        webbrowser.open_new_tab('https://github.com/DSarceno/Semestre10/tree/main/Sistemas%20Dinamicos/proyecto1/Codigos')
 
     def helpCF_activate(self, widget):
-        webbrowser.open_new_tab('https://github.com/DSarceno/programacionMatematica1/blob/master/Practica2/interfaz.py')
+        webbrowser.open_new_tab('https://github.com/DSarceno/Semestre10/blob/main/Sistemas%20Dinamicos/proyecto1/Codigos/interfaz.py')
 
 
 
